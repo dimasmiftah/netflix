@@ -13,7 +13,7 @@ export default function Signin() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const isInvalid = password == '' || emailAddress == '';
+  const isInvalid = password === '' || emailAddress === '';
   const handleSignIn = (event) => {
     event.preventDefault();
 
@@ -40,6 +40,7 @@ export default function Signin() {
           {error && <Form.Error>{error}</Form.Error>}
           <Form.Base onSubmit={handleSignIn} method='POST'>
             <Form.Input
+              type='email'
               placeholder='Email address'
               value={emailAddress}
               onChange={({ target }) => setEmailAddress(target.value)}
