@@ -14,7 +14,10 @@ export const Background = styled.div`
   }
 `;
 
-export const Frame = styled.div``;
+export const Group = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -30,6 +33,41 @@ export const Container = styled.div`
 
   @media (max-width: 1000px) {
     margin: 0 30px;
+  }
+`;
+
+export const Picture = styled.div`
+  background: url(${({ src }) => src});
+  background-size: contain;
+  border: 0;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+`;
+
+export const Dropdown = styled.div`
+  display: none;
+  background-color: black;
+  position: absolute;
+  padding: 10px;
+  width: 100px;
+  top: 32px;
+  right: 10px;
+`;
+
+export const Profile = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  position: relative;
+
+  button {
+    cursor: pointer;
+  }
+
+  &:hover > ${Dropdown} {
+    display: flex;
+    flex-direction: column;
   }
 `;
 
