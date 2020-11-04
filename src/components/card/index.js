@@ -1,4 +1,21 @@
 import React, { useState, useContext, createContext } from 'react';
+import {
+  Container,
+  Group,
+  Title,
+  SubTitle,
+  Text,
+  Feature,
+  FeatureTitle,
+  FeatureText,
+  FeatureClose,
+  Maturity,
+  Content,
+  Meta,
+  Entities,
+  Item,
+  Image,
+} from './styles/card';
 
 export const FeatureContext = createContext();
 
@@ -31,8 +48,30 @@ Card.Text = function CardText({ children, ...restProps }) {
   return <Text {...restProps}>{children}</Text>;
 };
 
+Card.Entities = function CardEntities({ children, ...restProps }) {
+  return <Entities {...restProps}>{children}</Entities>;
+};
+
 Card.Meta = function CardMeta({ children, ...restProps }) {
   return <Meta {...restProps}>{children}</Meta>;
+};
+
+Card.Feature = function CardFeature({ children, category, ...restProps }) {
+  const { showFeature, itemFeature, setShowFeature } = useContext(
+    FeatureContext
+  );
+
+  return showFeature ? (
+    <Feature src={`/images/${category}${itemFeature.slug}/large.jpg`}>
+      <Content>
+        <FeatureTitle>{itemFeature.title}</FeatureTitle>
+        <FeatureText>{itemFeature.title}</FeatureText>
+        <FeatureClose onClick={() => setShowFeature(false)}>
+          <img src='/image/icons/close.png' alt='Close' />
+        </FeatureClose>
+      </Content>
+    </Feature>
+  ) : null;
 };
 
 Card.Item = function CardItem({ item, children, ...restProps }) {
