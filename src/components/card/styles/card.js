@@ -10,6 +10,8 @@ export const SubTitle = styled.p``;
 
 export const Text = styled.p``;
 
+export const FeatureText = styled.p``;
+
 export const Feature = styled.div``;
 
 export const FeatureTitle = styled(Title)``;
