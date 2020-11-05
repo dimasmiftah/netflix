@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { SelectProfileContainer } from './profiles';
+import { FooterContainer } from './footer';
 import { FirebaseContext } from '../context/firebase';
 import { Card, Loading, Header } from '../components';
 import * as ROUTES from '../constants/routes';
@@ -60,7 +61,7 @@ export function BrowseContainer({ slides }) {
                   <Header.TextLink>{user.displayName}</Header.TextLink>
                 </Header.Group>
                 <Header.Group>
-                  <Header.TextLink onClink={() => firebase.auth().signOut()}>
+                  <Header.TextLink onClick={() => firebase.auth().signOut()}>
                     Sign out
                   </Header.TextLink>
                 </Header.Group>
@@ -110,6 +111,7 @@ export function BrowseContainer({ slides }) {
           </Card>
         ))}
       </Card.Group>
+      <FooterContainer />
     </>
   ) : (
     <SelectProfileContainer user={user} setProfile={setProfile} />

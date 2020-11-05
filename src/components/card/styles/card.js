@@ -176,7 +176,7 @@ export const Item = styled.div`
   }
 
   &:first-of-type {
-    margin-left: 56;
+    margin-left: 56px;
 
     @media (max-width: 1000px) {
       margin-left: 30px;
