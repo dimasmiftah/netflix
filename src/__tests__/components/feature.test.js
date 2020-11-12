@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import { Feature } from '../../components';
 
 describe('<Feature/>', () => {
-  it('should renders the <Featture/> with populated data', () => {
+  it('should renders the <Featture /> with populated data', () => {
     const { container, getByText } = render(
       <Feature>
         <Feature.Title>Unlimited films, TV programmes and more.</Feature.Title>
@@ -16,7 +16,7 @@ describe('<Feature/>', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should renders the <Featture/> with just a title', () => {
+  it('should renders the <Featture /> with just a title', () => {
     const { container, getByText, queryByText } = render(
       <Feature>
         <Feature.Title>Unlimited films, TV programmes and more.</Feature.Title>
@@ -28,7 +28,7 @@ describe('<Feature/>', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should renders the <Featture/> with just a subtitle', () => {
+  it('should renders the <Featture /> with just a subtitle', () => {
     const { container, getByText, queryByText } = render(
       <Feature>
         <Feature.SubTitle>Watch anywhere. Cancel at any time.</Feature.SubTitle>

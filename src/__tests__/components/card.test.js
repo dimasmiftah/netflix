@@ -34,8 +34,8 @@ const slideRows = [
   },
 ];
 
-describe('<Card/>', () => {
-  it('should renders the <Card/> with populated data', () => {
+describe('<Card />', () => {
+  it('should renders the <Card /> with populated data', () => {
     const { container, getByText } = render(
       <Card.Group>
         {slideRows.map((slideItem) => (
@@ -75,7 +75,7 @@ describe('<Card/>', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('should renders the <Card/> and toggles the card features', () => {
+  it('should renders the <Card /> and toggles the card features', () => {
     const { container, queryByText, getByTestId, getByAltText } = render(
       <Card.Group>
         {slideRows.map((slideItem) => (

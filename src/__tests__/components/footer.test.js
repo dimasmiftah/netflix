@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { Footer } from '../../components';
 
-describe('<Footer/>', () => {
+describe('<Footer />', () => {
   it('renders the <Footer /> with populated data', () => {
     const { container, getByText } = render(
       <Footer>

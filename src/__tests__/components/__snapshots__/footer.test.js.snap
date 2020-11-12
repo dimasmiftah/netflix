@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Footer/> renders the <Footer /> with populated data 1`] = `
+exports[`<Footer /> renders the <Footer /> with populated data 1`] = `
 <div
   class="footer__Container-qu6i6-0 iPlSJv"
 >
